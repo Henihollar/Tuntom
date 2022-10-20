@@ -1,10 +1,10 @@
+require('dotenv').config({path:__dirname+'/.env'});
 const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
 const db = process.env.MONGOURI;
 
-const connectDB = async() => {
+const connectDB = () => {
     try {
-        await mongoose.connect(db, {
+        mongoose.connect(db, {
             useNewUrlParser: true,
         });
         console.log('Database Connected....');
@@ -17,4 +17,4 @@ const connectDB = async() => {
 
 
 
-module.exports = connectDB
+module.exports = connectDB;
