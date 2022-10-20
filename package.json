@@ -80,8 +80,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodenode  server.js"
+    "start": "node  server.js"
   },
   "author": "Eniola Ashade",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "16.15.0"
+  }
 }

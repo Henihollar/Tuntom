@@ -66,7 +66,11 @@ app.post('/rsvp', (req, res) => {
 
     // res.redirect('/'); 
 }) 
+const port = process.env.PORT;
+if(port == null || port == ""){
+    port = 3000;
+}
 
-app.listen(process.env.PORT, () => {
-    console.log(`App is runing on port ${process.env.PORT}`)
+app.listen(port, () => {
+    console.log(`Server has started successfully`)
 }); 
