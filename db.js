@@ -1,10 +1,10 @@
-require('dotenv').config();
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
 const db = process.env.MONGOURI;
 
-const connectDB = () => {
+const connectDB = async() => {
     try {
-        mongoose.connect(db, {
+        await mongoose.connect(db, {
             useNewUrlParser: true,
         });
         console.log('Database Connected....');
@@ -17,4 +17,4 @@ const connectDB = () => {
 
 
 
-module.exports = connectDB;
+module.exports = connectDB
