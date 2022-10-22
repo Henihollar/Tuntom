@@ -232,7 +232,7 @@ nav .fa{
     width: 100%;
     height: 85vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/4.jpg);
-    background-position: center;
+    background-position: 20% 20%;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -296,6 +296,7 @@ nav .fa{
 .fifth-section{
     text-align: center;
     box-sizing: border-box;
+    margin-bottom: 35px;
 }
 
 .fifth-section p {
@@ -315,50 +316,14 @@ nav .fa{
     }
 }
 
-.cta{
-margin-bottom:30px;
-text-align: center;
-padding: 40px;
-}
 
-.rsvp{
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid black;
-    border-radius: 5px;
-    color: black;
-    background-color: peachpuff;
-    position: absolute;
-}
-
-.rsvp:hover{
-    transform: scale(1.1);
-    color: royalblue;
-}
-
-@media(max-width: 400px){
-    .cta{
-        margin-top:30px;
-        text-align: center;
-        height: 30px;
-      
-        }
-    
-    .rsvp{
-        text-decoration: none;
-        padding: 8px;
-        border: 2px solid grey;
-        border-radius: 3px;
-        color: black;
-        background-color: grey;
-        position: relative;
-    }
-        
-}
 
 /* ------------------------------ */
 
 /* STORY PAGE */
+#story-section{
+    margin-bottom: 20px;
+}
 .story-navbar{
     max-width: 100%;
     height: 85vh;
@@ -368,7 +333,7 @@ padding: 40px;
 }
 
 .story-navbar-text{
-    position: absolute;
+    position: relative;
     margin: auto;
     width: 100%;
     top: 50%;
@@ -420,8 +385,8 @@ line-height: 1.7rem;
     width: 100%;
     height: 85vh;
     background-image: linear-gradient(rgba(5, 20, 31, 0.7), rgba(4, 13, 30, 0.7)), url(Images/IMG_20220910_150726_353.jpg);
-    background-position:top;
-    background-size:cover; 
+    background-position:center;
+    background-size:contain; 
     background-attachment: fixed;
     background-repeat: no-repeat; 
     margin-top: 35px;
@@ -471,6 +436,9 @@ line-height: 1.7rem;
 
 
 /* Location Page */
+#location-section{
+    margin-bottom: 30px;
+}
 .location-navbar{
     max-width: 100%;
     height: 85vh;
@@ -480,7 +448,7 @@ line-height: 1.7rem;
     margin-bottom: 40px;
 }
 .location-navbar-text {
-    position: absolute;
+    position: relative;
     margin: auto;
     width: 100%;
     top: 50%;
@@ -553,3 +521,391 @@ line-height: 1.7rem;
     }
 }
 
+/* -----------Maps------------- */
+
+  iframe {
+    height:calc(100vh - 4px);
+    width:calc(100vw - 4px);
+    box-sizing: border-box;
+    overflow: hidden;
+   }
+
+
+   /* ------------crew------------- */
+.crew-section{
+    box-sizing: border-box;
+}
+
+.crew-section{
+    background-color: royalblue;
+}
+
+/* -----Crew------------- */
+.chairman img{
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.chairman h3{
+    color: rgb(233, 145, 68);
+    text-align: center;
+}
+.chairman p{
+    padding: 1.rem;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+.crew{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.crew-header{
+    color: rgb(233, 145, 68);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 15px;
+}
+.crew img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1.5rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+.crew img:hover{
+    box-shadow: 0px 30px 18px -8px rgba(233, 145, 68, 0.7);
+    transform: scale(1.05, 1.05);
+}
+
+.container{
+    width: 100%;
+    max-width: 310px;
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(233, 145, 68);
+    background: rgba(233, 145, 68, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    height: 90%;
+    transition: .5s ease;
+    opacity:0;
+    color: rgb(15, 32, 85);
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+/* media query */
+@media screen and (max-width: 600px) {
+    .crew{
+        padding: 2rem 1rem;
+    }
+}
+ 
+@media screen and (max-width: 400px) {
+    .crew{
+        padding: 2rem 1rem;
+    }
+     .crew-header{
+        font-size: 2rem;
+    }
+    .container{
+        margin-top: 1rem;
+    }
+    .crew img{
+        width: "100%";
+        margin: 1rem;
+    }
+    .chairman img{
+        padding: 1rem;
+    }
+}
+
+/* -----Gallery------------- */
+.gallery{
+    background-color: royalblue;
+}
+
+
+.gallery{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery h1{
+    color: rgb(233, 145, 68);
+    font-size: 3rem;
+}
+.gallery img{
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+.gallery img:hover{
+    box-shadow: 0px 30px 18px -8px rgba(233, 145, 68, 0.7);
+    transform: scale(1.05, 1.05);
+}
+
+.gallery-container{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* media query */
+@media screen and (max-width: 600px) {
+    .gallery{
+        padding: 2rem 1rem;
+    }
+}
+ 
+@media screen and (max-width: 400px) {
+    .gallery{
+        padding: 2rem 1rem;
+    }
+    .gallery h1{
+        font-size: 2rem;
+    }
+    .gallery-container{
+        margin-top: 1rem;
+    }
+    .gallery img{
+        width: "100%";
+        margin: 1rem;
+    }
+}
+
+/* ---------RSVP----------- */
+.rsvp{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, "Ubuntu";
+    overflow-x: hidden;
+}
+
+
+@media(max-width: 700px) {
+    .rsvp{
+        overflow-x: hidden;
+    }
+}
+
+.rsvp-navbar{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/5.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+   background-position: 50% 20%;
+   margin-bottom: 35px;
+}
+
+.rsvp-navbar-text h3{
+    position: relative;
+    color: peachpuff;
+    font-size: 3.5rem;
+    font-family: 'Tangerine', serif;
+    text-align: center; 
+}
+.rsvp-navbar-text p{
+    position: relative;
+    color: peachpuff;
+    font-size: 1rem;
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+}
+.rsvp-navbar-text{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    top: 50%;
+}
+
+/* For Media Query */
+@media(max-width: 400px){
+   
+ /* Removed .navbar here  */
+
+    .rsvp-navbar-text h3{
+        position: relative;
+        color: peachpuff;
+        font-size: 3rem;
+        font-family: 'Tangerine', serif;
+        text-align: center; 
+    }
+    .rsvp-navbar-text p{
+        position: relative;
+        color: peachpuff;
+        font-size: 1rem;
+        font-family: 'Marck Script', cursive;
+        text-align: center;
+    }
+    .rsvp-navbar-text{
+        position: relative;
+        margin: auto;
+        width: 100%;
+        top: 50%;
+    }
+    
+}
+
+
+/* ----form-------*/
+form{
+    margin: 0 auto; 
+    width:250px;
+}
+label{
+    font-weight: bold;
+}
+input{
+    margin-bottom: 30px;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+}
+textarea{
+    margin-bottom: 20px;
+}
+#button{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: peachpuff;
+    color: royalblue;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+#button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+textarea{
+    border-radius: 5px;
+    border: 2px solid royalblue;
+}
+
+/* -------------------------- */
+
+.substances{
+    margin-bottom: 30px;
+}
+
+.substances h4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.groom-account{
+    height: 300px;
+    width: 250px;
+    background-color: royalblue;
+    margin-right: 10px;
+    border-radius: 12px;
+    border: 2px solid peachpuff;
+    animation-name: Bride;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+   
+}
+.groom-account p{
+    text-align: center;
+    padding: 1.5rem;
+    color: peachpuff;
+}
+.bride-account{
+    height: 300px;
+    width: 250px;
+    background-color: peachpuff;
+    margin-left: 10px;
+    border-radius: 12px;
+    border: 2px solid royalblue;
+    animation-name: Bride;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes Bride{
+    50%{
+        transform: scale(1.01);
+        opacity: 0.5;
+    }
+}
+
+.bride-account p{
+    text-align: center;
+    padding: 1.5rem;
+    color: royalblue;
+}
+
+@media(max-width: 400px){
+    .groom-account{
+        height: 300px;
+        width: 250px;
+        background-color: royalblue;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        border-radius: 12px;
+        border: 2px solid peachpuff;
+    }
+    .bride-account{
+        height: 300px;
+        width: 250px;
+        background-color: peachpuff;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+        border: 2px solid royalblue;
+       
+    }
+}
